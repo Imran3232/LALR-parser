@@ -1,0 +1,338 @@
+Example 1:
+Number of production
+8
+E=TX
+X=+TX
+X=#
+T=FY
+Y=*FY
+Y=#
+F=(E)
+F=a
+
+First set
+U: ( a
+E: ( a
+T: ( a
+X: + #
+F: ( a
+Y: * #
+
+Follow set
+U :$
+E :$ )
+T :+ $ )
+X :$ )
+F :* + $ )
+Y :+ $ )
+
+Number of states = 30.
+
+
+Items in State 0...
+
+U=.E,$
+E=.TX,$
+T=.FY,+$
+F=.(E),*+$
+F=.a,*+$
+
+
+Items in State 1...
+
+U=E.,$
+
+
+Items in State 2...
+
+E=T.X,$
+X=.+TX,$
+X=.#,$
+
+
+Items in State 3...
+
+T=F.Y,+$
+Y=.*FY,+$
+Y=.#,+$
+
+
+Items in State 4...
+
+F=(.E),*+$
+E=.TX,)
+T=.FY,+)
+F=.(E),*+)
+F=.a,*+)
+
+
+Items in State 5...
+
+F=a.,*+$
+
+
+Items in State 6...
+
+E=TX.,$
+
+
+Items in State 7...
+
+X=+.TX,$
+T=.FY,+$
+F=.(E),*+$
+F=.a,*+$
+
+
+Items in State 8...
+
+T=FY.,+$
+
+
+Items in State 9...
+
+Y=*.FY,+$
+F=.(E),*+$
+F=.a,*+$
+
+
+Items in State 10...
+
+F=(E.),*+$
+
+
+Items in State 11...
+
+E=T.X,)
+X=.+TX,)
+X=.#,)
+
+
+Items in State 12...
+
+T=F.Y,+)
+Y=.*FY,+)
+Y=.#,+)
+
+
+Items in State 13...
+
+F=(.E),*+)
+E=.TX,)
+T=.FY,+)
+F=.(E),*+)
+F=.a,*+)
+
+
+Items in State 14...
+
+F=a.,*+)
+
+
+Items in State 15...
+
+X=+T.X,$
+X=.+TX,$
+X=.#,$
+
+
+Items in State 16...
+
+Y=*F.Y,+$
+Y=.*FY,+$
+Y=.#,+$
+
+
+Items in State 17...
+
+F=(E).,*+$
+
+
+Items in State 18...
+
+E=TX.,)
+
+
+Items in State 19...
+
+X=+.TX,)
+T=.FY,+)
+F=.(E),*+)
+F=.a,*+)
+
+
+Items in State 20...
+
+T=FY.,+)
+
+
+Items in State 21...
+
+Y=*.FY,+)
+F=.(E),*+)
+F=.a,*+)
+
+
+Items in State 22...
+
+F=(E.),*+)
+
+
+Items in State 23...
+
+X=+TX.,$
+
+
+Items in State 24...
+
+Y=*FY.,+$
+
+
+Items in State 25...
+
+X=+T.X,)
+X=.+TX,)
+X=.#,)
+
+
+Items in State 26...
+
+Y=*F.Y,+)
+Y=.*FY,+)
+Y=.#,+)
+
+
+Items in State 27...
+
+F=(E).,*+)
+
+
+Items in State 28...
+
+X=+TX.,)
+
+
+Items in State 29...
+
+Y=*FY.,+)
+2 and 11 will merged
+3 and 12 will merged
+4 and 13 will merged
+5 and 14 will merged
+6 and 18 will merged
+7 and 19 will merged
+8 and 20 will merged
+9 and 21 will merged
+10 and 22 will merged
+15 and 25 will merged
+16 and 26 will merged
+17 and 27 will merged
+23 and 28 will merged
+24 and 29 will merged
+LALR Table:
+    +          *          (          )          a          $          U          E          T          X          F          Y
+    0          0          4          0          5          0          0          1          2          0          3          0
+    0          0          0          0          0        -30          0          0          0          0          0          0
+    7          0          0         -3          0         -3          0          0          0          6          0          0
+   -6          9          0         -6          0         -6          0          0          0          0          0          8
+    0          0          4          0          5          0          0         10          2          0          3          0
+   -8         -8          0         -8          0         -8          0          0          0          0          0          0
+    0          0          0         -1          0         -1          0          0          0          0          0          0
+    0          0          4          0          5          0          0          0         15          0          3          0
+   -4          0          0         -4          0         -4          0          0          0          0          0          0
+    0          0          4          0          5          0          0          0          0          0         16          0
+    0          0          0         17          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    7          0          0         -3          0         -3          0          0          0         23          0          0
+   -6          9          0         -6          0         -6          0          0          0          0          0         24
+   -7         -7          0         -7          0         -7          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0         -2          0         -2          0          0          0          0          0          0
+   -5          0          0         -5          0         -5          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+    0          0          0          0          0          0          0          0          0          0          0          0
+Input expression
+a+a*(a+a)
+0 is pushed
+Shift 5
+Reduce 8   .. F=a
+Reduce 6   .. Y=#
+Reduce 4   .. T=FY
+Shift 7
+Shift 5
+Reduce 8   .. F=a
+Shift 9
+Shift 4
+Shift 14
+Reduce 8   .. F=a
+Reduce 6   .. Y=#
+Reduce 4   .. T=FY
+Shift 19
+Shift 14
+Reduce 8   .. F=a
+Reduce 6   .. Y=#
+Reduce 4   .. T=FY
+Reduce 3   .. X=#
+Reduce 2   .. X=+TX
+Reduce 1   .. E=TX
+Shift 17
+Reduce 7   .. F=(E)
+Reduce 6   .. Y=#
+Reduce 5   .. Y=*FY
+Reduce 4   .. T=FY
+Reduce 3   .. X=#
+Reduce 2   .. X=+TX
+Reduce 1   .. E=TX
+accepted
+
+Process returned 0 (0x0)   execution time : 11.107 s
+Press any key to continue.
+
+Example:2
+Number of production
+3
+S=CC
+C=cC
+C=d
+
+First set
+U: c d
+S: c d
+C: c d
+
+Follow set
+U :$
+S :$
+C :c d $
+
+Number of states = 10.
+
+
+Items in State 0...
+
+U=.S,$
+S=.CC,$
+C=.cC,cd
+C=.d,cd
+
+
+Items in State 1...
+
+U=S.,$
+
+
+Items in State 2...
+
+S=C.C,$
+C=.cC,$
+C=.d,$
